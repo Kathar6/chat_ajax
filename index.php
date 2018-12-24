@@ -1,3 +1,6 @@
+<?php
+    include "server.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +11,13 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <title>Chat_Ejemplo</title>
 </head>
-<body>
+<body onload="ajax()">
     <header>
         <h1>Chat Ejemplo</h1>
     </header>
     <section>
         <div id="contenedor">
             <div id="cajachat">
-                <div id="datos-chat">
-                    <span style="color:#9e9e9e; margin-right:10px;">User 1: </span>
-                    <span>Sample text</span>
-                    <span style="float:right;">10:04 am</span>
-                </div>
             </div>
             <form action="index.php" method="post">
                 <input type="text" name="nombre" id="" placeholder="Ingresa tu nombre"/>
@@ -28,6 +26,15 @@
                 <input type="submit" value="Enviar" name="btnEnviar"/>
 
             </form>
+            <?php
+                if(isset($_POST['btnEnviar'])){
+                    $name = $_POST['nombre'];
+                    $message = $_POST['mensaje'];
+                    $sql = "INSERT INTO usuario (nombre,mensaje) VALUES('$name','$message')";
+                    $query = mysqli_query($con,$sql);
+
+                }
+            ?>
         </div>
     </section>
     <footer>
@@ -35,5 +42,6 @@
         <br/>
         ©2018
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
