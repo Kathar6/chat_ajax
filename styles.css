@@ -3,7 +3,7 @@
     padding:0px;
 }
 body{
-    background-color:#fafafa;
+    background-color:#eee;
     display:grid;
     grid-template-columns:1fr;
     grid-template-rows:1fr 10fr 1fr;
@@ -21,11 +21,44 @@ section{
     grid-column:1;
     grid-row:2/3;
     display:grid;
-    grid-template-areas:"null chat chat chat null";
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-rows:1fr 10fr 1fr;
     margin:8px;
 }
 #contenedor{
-    grid-area:chat;
+    grid-column:2/3;
+    grid-row:2/3;
+    border:1px solid #e0e0e0;
+    background-color:#fff;
+    padding:10px;
+}
+#cajachat{
+    border:1px solid #e0e0e0;
+    height:85%;
+    padding:5px;
+}
+#datos-chat{
+    border-bottom:1px solid #e0e0e0;
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+input[type="text"]{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+input[type="text"]:hover{
+    cursor:pointer;
+}
+textarea{
+    resize:none;
+    width:90%;
+}
+input[type="submit"]{
+    background-color:#eee;
+    border:1px solid #e0e0e0;
+    padding:5px;
+    float:right;
+    font-weight:bold;
 }
 footer{
     padding-top:1vh;
