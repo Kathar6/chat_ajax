@@ -20,7 +20,7 @@
             <div id="cajachat">
             </div>
             <form action="index.php" method="post">
-                <input type="text" name="nombre" id="" placeholder="Ingresa tu nombre"/>
+                <input type="text" name="nombre" id="" pattern="[A-Za-z0-9_]{2,50}" placeholder="Ingresa tu nombre"/>
                 <br>
                 <textarea name="mensaje" id="" placeholder="Ingresa tu mensaje"></textarea>
                 <input type="submit" value="Enviar" name="btnEnviar"/>
