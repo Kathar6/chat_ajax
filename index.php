@@ -30,7 +30,7 @@
         </div>
     </section>
     <footer>
-        Mateo Alonso Pabón García
+        mate458
         <br/>
         ©2018
     </footer>
